@@ -1,0 +1,242 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Top controls stacked vertically */
+.top-controls {
+    display: flex;
+    flex-direction: column; /* stack input and button */
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    gap: 10px; /* spacing between input and button */
+}
+
+/* Search wrapper for suggestions */
+.search-wrapper {
+    position: relative;
+    width: 100%; /* take full width */
+}
+
+/* Search input */
+#searchInput {
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background-color: #1e1e1e;
+    color: #eee;
+    padding: 0 15px; /* horizontal padding only */
+    height: 42px; /* fixed height */
+    display: flex;
+    align-items: center;
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+}
+
+/* Random button full width */
+#randomBtn {
+    width: 100%;
+    padding: 0 15px;
+    font-size: 1rem;
+    background-color: #1e1e1e;
+    color: #eee;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+    height: 42px; /* same as input */
+}
+
+#randomBtn:hover {
+    background-color: #333;
+}
+
+/* Add transition for fade effect */
+.card {
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: opacity 0.3s ease; /* fade effect */
+    opacity: 1; /* default fully visible */
+}
+
+/* Image container with hover overlay */
+.image-container {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    display: block;
+}
+
+/* Image */
+#image {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    object-fit: cover;
+}
+
+/* Hover overlay covering full image */
+.hover-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    border-radius: 5px 5px 0px 0px;
+}
+
+/* Show overlay on hover */
+.image-container:hover .hover-details {
+    opacity: 1;
+}
+
+/* Title clickable */
+#title {
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    margin: 20px;
+}
+
+/* Social links */
+.socials {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 20px;
+}
+
+.socials a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}
+
+/* Suggestions dropdown */
+.suggestions-list {
+    position: absolute;
+    top: 100%; /* directly under input */
+    left: 0;
+    right: 0;
+    background-color: #1e1e1e;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+    list-style: none;
+    margin-top: 5px;
+    padding: 0;
+    z-index: 100;
+    display: none;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #eee;
+}
+
+.suggestions-list li:hover {
+    background-color: #333;
+}
+
+/* Webkit browsers (Chrome, Edge, Safari) */
+.suggestions-list::-webkit-scrollbar {
+    width: 6px; /* very thin */
+    background: transparent; /* no background */
+}
+
+.suggestions-list::-webkit-scrollbar-thumb {
+    background-color: #888; /* thumb color, adjust to app palette */
+    border-radius: 3px; /* rounded edges */
+}
+
+.suggestions-list::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa; /* slightly lighter on hover */
+}
+
+/* Firefox */
+.suggestions-list {
+    scrollbar-width: thin; /* makes scrollbar minimal */
+    scrollbar-color: #888 transparent; /* thumb and track */
+}
+
+/* Phones (small screens) */
+@media (max-width: 480px) {
+    .top-controls {
+        width: 95%;
+        gap: 8px;
+    }
+
+    #searchInput, #randomBtn {
+        height: 38px;
+        font-size: 0.95rem;
+        padding: 0 12px;
+    }
+
+    .card {
+        max-width: 95%;
+    }
+
+    #title {
+        font-size: 0.9rem;
+        margin: 15px;
+    }
+
+    .hover-details {
+        font-size: 0.9rem;
+    }
+
+    .socials {
+        flex-direction: column;
+        gap: 10px;
+        margin: 15px;
+    }
+}

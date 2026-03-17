@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Non Slop Finder</title>
+</head>
+<body>
+
+  <main>
+    <div class="top-controls">
+      <button id="randomBtn">🎲 Random Video</button>
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="Search by title, tags, or creator..." autocomplete="off">
+        <ul id="suggestions" class="suggestions-list"></ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image-container">
+        <img id="image" src="#" alt="Video Thumbnail">
+        <div class="hover-details">
+          <p id="creator"></p>
+          <p id="tags"></p>
+          <p id="length"></p>
+        </div>
+      </div>
+      <p id="title"></p>
+    </div>
+  </main>
+
+  <div class="socials">
+    <a href="mailto:yourname@gmail.com">📧 Email Me</a>
+    <a href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
