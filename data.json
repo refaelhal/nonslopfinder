@@ -75,21 +75,8 @@
     },
     {
       "id": 7,
-      "title": "Lewis Hamilton ON: EVERYTHING You've Been Taught About Success Is A LIE... |  Jay Shetty",
-      "image": "images/7.jpg",
-      "link": "https://www.youtube.com/watch?v=AyiWKXTd9aY",
-      "tags": [
-        "Success",
-        "Racing",
-        "Podcast"
-      ],
-      "creator": "Jay Shetty Podcast",
-      "length": "1:10:35"
-    },
-    {
-      "id": 8,
       "title": "Why It Was Almost Impossible to Make the Blue LED",
-      "image": "images/8.jpg",
+      "image": "images/7.jpg",
       "link": "https://www.youtube.com/watch?v=AF8d72mA41M",
       "tags": [
         "Science",
@@ -97,6 +84,19 @@
       ],
       "creator": "Veritasium",
       "length": "33:44"
+    },
+    {
+      "id": 8,
+      "title": "Gordon Ramsay Speedruns Minecraft | The Prequel",
+      "image": "images/8.jpg",
+      "link": "https://www.youtube.com/watch?v=dHy-qfkO54E",
+      "tags": [
+        "Gordon Ramsay",
+        "Speedrun",
+        "Minecraft"
+      ],
+      "creator": "TortillaDelta13",
+      "length": "02:44"
     }
   ]
 }
